@@ -1,0 +1,10 @@
+BDN
+Avg. psnr: 15.311094 ssim: 0.763913
+IBLNN
+Avg. psnr: 18.397885 ssim: 0.877712
+IBCLN
+Avg. psnr: 32.931523 ssim: 0.992872
+PRN
+Avg. psnr: 19.572464 ssim: 0.935561
+RR
+Avg. psnr: 31.372716ssim: 0.974210

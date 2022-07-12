@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CNN-from-Scratch-master/.idea/CNN-from-Scratch-master.iml" filepath="$PROJECT_DIR$/../CNN-from-Scratch-master/.idea/CNN-from-Scratch-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CoRRN-master/.idea/CoRRN-master.iml" filepath="$PROJECT_DIR$/../CoRRN-master/.idea/CoRRN-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IBCLN-master.iml" filepath="$PROJECT_DIR$/.idea/IBCLN-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Reflection_removal_rendering-master/.idea/Reflection_removal_rendering-master.iml" filepath="$PROJECT_DIR$/../Reflection_removal_rendering-master/.idea/Reflection_removal_rendering-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Single-Image-Reflection-Removal-Beyond-Linearity-master/.idea/Single-Image-Reflection-Removal-Beyond-Linearity-master.iml" filepath="$PROJECT_DIR$/../Single-Image-Reflection-Removal-Beyond-Linearity-master/.idea/Single-Image-Reflection-Removal-Beyond-Linearity-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bdn-refremv-master/.idea/bdn-refremv-master.iml" filepath="$PROJECT_DIR$/../bdn-refremv-master/.idea/bdn-refremv-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../perceptual-reflection-removal-master/.idea/perceptual-reflection-removal-master.iml" filepath="$PROJECT_DIR$/../perceptual-reflection-removal-master/.idea/perceptual-reflection-removal-master.iml" />
+    </modules>
+  </component>
+</project>
