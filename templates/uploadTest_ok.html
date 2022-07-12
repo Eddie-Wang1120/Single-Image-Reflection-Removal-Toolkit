@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/socket.io/1.5.1/socket.io.min.js"></script>
+</head>
+<body>
+
+  <div class="hero_area">
+
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="design-box">
+        <img src="../static/images/design-1.png" alt="">
+      </div>
+      <div class="container">
+
+        <div class="title_h1">
+          <h1>开始处理</h1>
+          <p>
+            开始进行单张图像去反光测试集分析处理
+          </p>
+        </div>
+          <button class="TestImageProcess" href="#">点击开始</button>
+
+      </div>
+
+    <div class="loading">
+        <span id="loaded_t" class="top"></span>
+        <span id="loaded_b" class="bottom"></span>
+    </div>
+
+  <form method="get" action="/zipresult">
+    <input class='res_btn' id='one' type="submit" value="查看结果" style="display:none">
+  </form>
+        <script type="text/javascript" charset="utf-8">
+
+
+    var log = function() {
+      console.log.apply(console, arguments)
+    }
+
+    var socket;
+
+    var current_channel = ''
+
+    $(document).ready(function() {
+      socket = io.connect('ws://' + document.domain + ':' + location.port + '/uploadTest_ok');
+      log('xxqqq', socket)
+
+      socket.on('connect', function() {
+        log('连接');
+      });
+
+      var box = document.getElementById("one");
+      var loaded_t = document.getElementById("loaded_t");
+      var loaded_b = document.getElementById("loaded_b");
+      socket.on('Testfinished', function(data) {
+           box.style.display = "block";
+           loaded_t.style.display = "none";
+           loaded_b.style.display = "none";
+      });
+
+      socket.on('status', function(data) {
+      $('.text-area').val($('.text-area').val() + '<' + data.server_to_client + '>\n');
+      });
+
+
+      socket.on('message', function(data) {
+        var Username = data.user_name
+        var text = data.text
+      });
+
+      $('.TestImageProcess').on('click', function(e) {
+        current_channel = $(this).text();
+           loaded_t.style.display = "block";
+           loaded_b.style.display = "block";
+        socket.emit('Teststart', {'client_to_server': 'TestImage'});
+        socket.emit('Testfinish', {'client_to_server': 'TestImage'});
+        socket.emit('Testleft', {'client_to_server': 'TestImage'});
+
+        log('socket.emit TestImage')
+      })
+
+    });
+
+
+  </script>
+
+    </section>
+  </div>
+
+
+</body>
+</html>

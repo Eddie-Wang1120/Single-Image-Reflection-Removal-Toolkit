@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image results</title>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/socket.io/1.5.1/socket.io.min.js"></script>
+</head>
+
+<body>
+ <div class="hero_area">
+
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="design-box">
+        <img src="../static/images/design-1.png" alt="">
+      </div>
+      <div class="container">
+
+        <div class="title_h1_one">
+          <h1>查看结果</h1>
+          <p>
+            单张图片多方法处理结果，可下载全部图片结果。
+          </p>
+        </div>
+
+      <div class="item_container_one">
+        <div class="box">
+            <h5>BDN</h5>
+          <div class="img-box">
+            <img src="../static/downloads/BDN_res.jpg">
+          </div>
+        </div>
+         <div class="box">
+             <h5>IBCLN</h5>
+          <div class="img-box">
+            <img src="../static/downloads/IBCLN_res.jpg">
+          </div>
+        </div>
+         <div class="box">
+             <h5>PRN</h5>
+          <div class="img-box">
+            <img src="../static/downloads/PRN_res.jpg">
+          </div>
+        </div>
+          <div class="box">
+              <h5>RR</h5>
+          <div class="img-box">
+            <img src="../static/downloads/RR_res.jpg">
+          </div>
+        </div>
+          <div class="box">
+              <h5>IBLNN</h5>
+          <div class="img-box">
+            <img src="../static/downloads/IBLNN_res.jpg">
+          </div>
+        </div>
+      </div>
+  <form method="get" action="/return_to_index">
+    <input class="return_index" type="submit" value="返回主页">
+  </form>
+
+  <form method="get" action="/download_one">
+    <input class="download" type="submit" value="下载结果">
+  </form>
+
+      </div>
+
+    </section>
+  </div>
+
+
+</body>
+
+</html>
