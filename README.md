@@ -24,7 +24,7 @@ This is a Toolkit uses five different models to remove the reflection on single 
 ## IBLNN model
 
 network structure
-<img>
+<img src='./img/network.png'>
 
 loss functions
 <img>
